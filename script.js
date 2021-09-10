@@ -43,7 +43,7 @@ const gato = function(){if (c <= 100){
    setTimeout('gato()', 250);	
    c += 10;
 } else if (link != ''){
-   window.location.href = link;
+   window.open(link, '_blank');
 }
 }
 
