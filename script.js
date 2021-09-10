@@ -1,4 +1,4 @@
-
+localStorage.setItem('cor', '');
 brilho = 1
 function white (){
     var el = document.getElementsByTagName('body')[0]
@@ -16,7 +16,7 @@ function white (){
 }
 function white2 (){
     var el = document.getElementsByTagName('body')[0]
-    if (localStorage.cor == 'white'){
+    if (localStorage.cor == 'white' or localStorage.cor == ''){
         el.classList.remove('black');
         el.classList.add('white');
         cache = 'white';
