@@ -1,4 +1,6 @@
-brilho = 1
+brilho = 1;
+link = '';
+materia2 = '';
 function white (){
     var el = document.getElementsByTagName('body')[0]
     if ((brilho % 2 == 1)){
@@ -42,7 +44,7 @@ const gato = function(){if (c <= 100){
    document.getElementsByClassName('value')[0].innerHTML = c + '%';				
    setTimeout('gato()', 250);	
    c += 10;
-} else if (link != ''){
+} else if (link != ''&& link != undefined){
    window.location.href = link;
 }
 }
@@ -91,7 +93,7 @@ const getDia = function(){
            else if (entre(hora, minuto, 14, 09, 16, 11)){
                redirecionar(ingles, 'INGLÊS')
            } else if (entre(hora, minuto, 16, 11, 18, 01)){
-               redirecionar(dw, 'DES. WEB')
+               redirecionar(dw)
            } else if (comparahora(hora, minuto, '>=', 18, 01)){
                semaulamais()
            }
@@ -101,7 +103,7 @@ const getDia = function(){
                semaulaagora1('História', 13, 30, 'Matemática', 15, 30);
            }
            else if (entre(hora, minuto, 13, 19, 15, 16)){
-               redirecionar(historia, 'HISTÓRIA')
+               redirecionar(historia)
            } else if (entre(hora, minuto, 15, 15, 17, 21)){
                redirecionar(matematica)
            } else if (comparahora(hora, minuto, '>', 17, 20)){
@@ -123,7 +125,7 @@ const getDia = function(){
                semaulaagora2('Matemática', 16, '00')
            }
             else if (entre(hora, minuto, 15, 50, 18, 01)){
-               redirecionar(matematica, 'MATEMÁTICA')
+               redirecionar(matematica)
            } else if (comparahora(hora, minuto, '>', 18, 00)){
                semaulamais()
            }
@@ -161,7 +163,7 @@ const semaulamais = function(){
    document.getElementsByClassName('skill')[0].style.display = 'none';
    document.getElementById('p').style.color = "rgb(0, 255, 13)";
    document.getElementById('p').innerHTML = '<p2></p2>'
-   document.getElementsByTagName('p4')[0].innerHTML = "Ops... Não temos mais aula síncrona hoje. Aproveite! =) <br><br>";
+   document.getElementsByTagName('p2')[0].innerHTML = "Ops... Não temos mais aula síncrona hoje. Aproveite! =) <br><br>";
 }
 const redirecionar = function(materia, materia2){
    document.getElementsByTagName('p2')[0].innerHTML = materia2;
