@@ -1,4 +1,3 @@
-localStorage.setItem('cor', '');
 brilho = 1
 function white (){
     var el = document.getElementsByTagName('body')[0]
@@ -16,7 +15,7 @@ function white (){
 }
 function white2 (){
     var el = document.getElementsByTagName('body')[0]
-    if (localStorage.cor == 'white' or localStorage.cor == ''){
+    if (localStorage.cor == 'white' || localStorage.cor == undefined){
         el.classList.remove('black');
         el.classList.add('white');
         cache = 'white';
@@ -39,7 +38,6 @@ function sleep(milliseconds){
    }
 }
 var c = 10
-var link = '';
 const gato = function(){if (c <= 100){
    document.getElementsByClassName('value')[0].innerHTML = c + '%';				
    setTimeout('gato()', 250);	
